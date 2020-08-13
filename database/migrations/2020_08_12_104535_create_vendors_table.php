@@ -4,10 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVendorsTable extends 
-$table->string('vemdor_id');
-$table->string('vemdor_id');
-$table->string('vemdor_id');
+class CreateVendorsTable extends Migration
 {
     /**
      * Run the migrations.
