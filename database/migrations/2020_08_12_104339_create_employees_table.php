@@ -17,6 +17,7 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('servmen_code');
             $table->string('f_name');
+            $tablr->string('m_name');
             $table->string('s_name');
             $table->string('profile_pic');
             $table->string('phoneno');
