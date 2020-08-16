@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('prod_code');
             $table->string('prod_name');
             $table->string('providers')->nullable();
+            $table->string('vendor_code')->nullable();
             $table->string('category_id')->nullable();
             $table->string('brand')->nullable();
             $table->string('highlights')->nullable();
@@ -44,6 +45,8 @@ class CreateProductsTable extends Migration
     }
 
     /**
+     * xyz 
+     * 
      * Reverse the migrations.
      *
      * @return void
