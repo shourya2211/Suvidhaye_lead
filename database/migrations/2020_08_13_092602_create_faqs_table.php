@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Role extends Migration
+class CreateFaqsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class Role extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('faqs', function (Blueprint $table) {
             $table->id();
-            $table->string('user_code');
-            $table->string('role');
+            $table->string('prod_code');
+            $table->string('faq1')->nullable();
+            $table->string('faq2')->nullable();
+            $table->string('faq3')->nullable();
+            $table->string('faq4')->nullable();
+            $table->string('faq5')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('faqs');
     }
 }

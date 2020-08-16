@@ -15,18 +15,18 @@ class CreateServicemenTable extends Migration
     {
         Schema::create('servicemen', function (Blueprint $table) {
             $table->id();
-            $table->string('servmen_id');
+            $table->string('servicemen_code')->unique();
             $table->string('f_name');
             $table->string('s_name');
-            $table->string('profile_pic');
+            $table->string('profile_pic')->nullable();
             $table->string('phoneno');
-            $table->string('joining_designatiopn');
-            $table->string('current_designation');
-            $table->string('serv_comp');
-            $table->string('failed_req');
-            $table->string('doj');
-            $table->string('dol');
-            $table->string('active_starts');
+            $table->string('joining_designatiopn')->nullable();
+            $table->string('current_designation')->nullable();
+            $table->string('serv_comp')->nullable();
+            $table->string('failed_req')->nullable();
+            $table->string('doj')->nullable();
+            $table->string('dol')->nullable();
+            $table->string('active_starts')->nullable();
             $table->timestamps();
         });
     }

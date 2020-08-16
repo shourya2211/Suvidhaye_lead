@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Role extends Migration
+class CreateIdproofDocsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,15 @@ class Role extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('idproof_docs', function (Blueprint $table) {
             $table->id();
             $table->string('user_code');
-            $table->string('role');
+            $table->string('adhaar_card');
+            $table->string('id_proof2');
+            $table->string('address_proof1');
+            $table->string('address_proof2');
+            $table->string('vehicle1');
+            $table->string('vehicle2');
             $table->timestamps();
         });
     }
@@ -28,6 +33,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('idproof_docs');
     }
 }

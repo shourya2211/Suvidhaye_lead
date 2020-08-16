@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Role extends Migration
+class CreatePaymentMethodsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Role extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('payment_methods', function (Blueprint $table) {
             $table->id();
-            $table->string('user_code');
-            $table->string('role');
+            $table->string('pay_code');
+            $table->string('pay_name');
+            $table->string('pay_provider');
+            $table->string('pay_charges')->nullable();
+            $table->string('pay_offers');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('payment_methods');
     }
 }
